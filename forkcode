@@ -1,0 +1,72 @@
+//simple fork
+#include <stdio.h> 
+#include <sys/types.h> 
+#include <unistd.h> 
+int main() 
+{ 
+  
+    fork(); 
+  
+    printf("SHIVAM AGARWAL!\n"); 
+    return 0; 
+} 
+
+
+//3 times fork
+#include <stdio.h> 
+#include <sys/types.h> 
+int main() 
+{ 
+	fork(); 
+	fork(); 
+	fork(); 
+	printf("SHIVAM AGARWAL\n"); 
+	return 0; 
+} 
+
+
+//fork if else
+#include <stdio.h> 
+#include <sys/types.h> 
+#include <unistd.h> 
+void forkie() 
+{ 
+
+	if (fork() == 0) 
+		printf("HERE IS THE CHILD\n"); 
+ 
+	else
+		printf("HERE IS THE PARENT!\n"); 
+} 
+int main() 
+{ 
+	forkie(); 
+	return 0; 
+} 
+
+
+//fork loop
+#include <stdio.h> 
+#include <sys/types.h> 
+int main() 
+{ 
+     fork();
+    for(int i=0;i<3;i++){
+       printf("SHIVAM AGARWAL\n"); 
+    }
+	
+	return 0; 
+}
+
+
+//fork operators
+#include <stdio.h> 
+#include <sys/types.h> 
+int main() 
+{ 
+    fork() && fork() ;
+    fork() || fork() ;
+    fork() ^ fork() ;
+	printf("SHIVAM AGARWAL\n"); 
+	return 0; 
+}
